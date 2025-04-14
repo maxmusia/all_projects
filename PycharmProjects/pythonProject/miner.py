@@ -1,4 +1,4 @@
-print('Welcome to Captain Zalupa Miner! Please, read the instructions:', '\n'
+print('Welcome to Captain Miner! Please, read the instructions:', '\n'
       'Ввод высоты поля, ширины поля и количества мин через Enter:', '\n'
       '5', '\n' '7' '\n' '14', '\n' 'Координаты открываемого поля вводить в строку через пробел в формате "строка столбец":', '\n'
        '3 1', '\n' 'Для установки флага ввести координаты в формате "строка столбец+", где "+" - маркер:', '\n' "1 0+", '\n'
@@ -91,7 +91,7 @@ def all_dots_open(x, y):                                                        
     return()
 
 def game_over(field_):
-    print('GAME OVER! CAPTAIN ZALUPA HAS LEFT THE VESSEL!♠♠♠')
+    print('GAME OVER! CAPTAIN HAS LEFT THE VESSEL!♠♠♠')
     for c in field_:
         print(*c)
     return ()
@@ -131,7 +131,7 @@ while game:
             xs_coords.append((point[0], point[1]))              # добавляем эти координаты в список координат флагов
             xs += 1                                             # счетчик флага +1
             if xs == m and sorted(xs_coords) == mines_coords:   # если количество флагов и их координаты совпадают с количеством мин и их координатами, то победа
-                print('Mines left:  0', '\n' 'YOU WIN!!! CONGRATULATIONS FROM CAPTAIN ZALUPA!!!♥♥♥')
+                print('Mines left:  0', '\n' 'YOU WIN!!! CONGRATULATIONS FROM CAPTAIN!!!♥♥♥')
                 break
     elif inp.endswith('-'):                                 # запрос на отмену флага
         point = tuple(map(int, inp[:-1].split(' ')))         # считываем координаты без маркера
